@@ -17,10 +17,10 @@ def fetch_json():
         response.raise_for_status()
         data = response.json()
 
-        with open('recent_track.json', 'w', encoding='utf-8') as f:
+        with open('results.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
-        print("JSON data saved successfully to recent_track.json.")
+        print("JSON data saved successfully to results.json.")
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
 
